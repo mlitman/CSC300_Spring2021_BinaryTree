@@ -11,6 +11,12 @@ int main(int argc, char** argv)
     bt->add(13);
     bt->add(17);
     cout << bt->getCount() << endl;
+    cout << "********" << endl;
     bt->visitInOrder();
+    cout << endl << "********" << endl;
+    bt->visitPostOrder();
+    cout << endl << "********" << endl;
+    bt->visitPreOrder();
+    cout << endl << "********" << endl;
     return 0;
 }

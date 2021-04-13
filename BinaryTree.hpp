@@ -11,6 +11,8 @@ class BinaryTree
         BinaryTree(); //creates an empty tree
         BinaryTree(int payload);
         void visitInOrder();
+        void visitPreOrder();
+        void visitPostOrder();
         int getPayload();
         void add(int payload);
         int getCount();

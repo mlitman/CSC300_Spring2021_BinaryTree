@@ -39,6 +39,42 @@ void BinaryTree::visitInOrder()
     
 }
 
+void BinaryTree::visitPreOrder()
+{
+    if(!this->isEmpty)
+    {
+        cout << this->payload << " ";
+        if(this->leftChild)
+        {
+            this->leftChild->visitPreOrder();
+        }
+        
+        if(this->rightChild)
+        {
+            this->rightChild->visitPreOrder();
+        }
+    }
+    
+}
+
+void BinaryTree::visitPostOrder()
+{
+    if(!this->isEmpty)
+    {
+        if(this->leftChild)
+        {
+            this->leftChild->visitPostOrder();
+        }
+        
+        if(this->rightChild)
+        {
+            this->rightChild->visitPostOrder();
+        }
+        cout << this->payload << " ";
+    }
+    
+}
+
 int BinaryTree::getCount()
 {
     return this->count;
